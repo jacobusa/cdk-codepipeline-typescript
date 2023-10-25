@@ -11,7 +11,7 @@ export class CdkCodepipelineTypescriptStack extends cdk.Stack {
   constructor(scope: Construct, id: string, props?: cdk.StackProps) {
     super(scope, id, props);
     new CodePipeline(this, "Pipeline", {
-      pipelineName: "Test Pipeline",
+      pipelineName: "TestPipeline",
       synth: new ShellStep("Synth", {
         input: CodePipelineSource.gitHub(
           "jacobusa/cdk-codepipeline-typescript",
